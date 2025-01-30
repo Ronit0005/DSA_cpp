@@ -18,6 +18,41 @@ int main(){
     cout<<endl;
    }
    */
-    
+    //PATTERN 3:
+    /*for(int i=1;i<=4;i++){
+        for(int j=i;j>=1;j--){
+            cout<<j;
+        }
+        cout<<endl;
+    }
+    */
+   // PATTERN 4:
+   /*int t=1;
+   int n=1;
+   for(int i=1;i<=10;i++){
+     cout<<i;
+     if(t==n){
+        cout<<endl;
+        n=0;
+        t++;
+     }
+     n++;
+   }
+   */
+  // PATTERN 5:
+  /*int t=4;
+    for(int i=1;i<=4;i++){
+        for(int s=0;s<=i-1;s++){
+            cout<<" ";
+        }
+        
+        for(int j=1;j<=t;j++){
+            cout<<i;
+        }
+        t--;
+        cout<<endl;
+    }
+    */
+   
     return 0;
 }
