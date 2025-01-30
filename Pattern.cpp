@@ -53,6 +53,51 @@ int main(){
         cout<<endl;
     }
     */
-   
+   // PATTERN 5:
+   /*int j;int n=3;
+   for(int i=1;i<=4;i++){
+    for( j=1;j<=n;j++){
+        cout<<" ";
+    }
+    n--;
+    for(int k=1;k<=i;k++){
+        cout<<k;
+    }
+    for(int l=i-1;l>=1;l--){
+        cout<<l;
+    }
+    cout<<endl;
+   }
+   */
+  //PATTERN 6:
+  int n=1;int z=3;
+  for(int i=1;i<=4;i++){
+    for(int j=1;j<=4-i;j++){
+        cout<<" ";
+    }
+    cout<<"*";
+    for(int k=1;k<=n-2;k++){
+        cout<<" ";
+    }
+    n+=2;
+    if(i!=1){
+    cout<<"*";
+    }
+    cout<<endl;
+  }
+  for(int i=1;i<=3;i++){
+    for(int j=1;j<=i;j++){
+        cout<<" ";
+    }
+    cout<<"*";
+    for(int k=1;k<=z;k++){
+      cout<<" ";
+    }
+    z-=2;
+    if(i!=3){
+        cout<<"*";
+    }
+    cout<<endl;
+  }
     return 0;
 }
