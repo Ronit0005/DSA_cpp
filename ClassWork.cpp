@@ -1,6 +1,17 @@
 #include <iostream>
 using namespace std;
-enum size {small=10,medium=20,large=30,extralarge=40};
+//enum size {small=10,medium=20,large=30,extralarge=40};
+int factorial(int n){
+    if(n==1){
+        return 1;
+    }else{
+        return n*factorial(n-1);
+    }
+}
+int sum(int a,int b){
+    return a+b;
+}
+//#include <string>
 int main(){
     //int arr[]={1,2,3,4,5};
     //cout<<*arr<<endl;
@@ -30,7 +41,7 @@ int main(){
     // int a=10;
     // int * ptr=&a;
     // cout<<"The address of a is : "<<ptr;
-    int a=10;
+    //int a=10;
     // int* ptr=&a;
     // int** gtr=&ptr;
     // cout<<**gtr;
@@ -52,6 +63,31 @@ int main(){
     // size s1=medium;
     // cout<<s<<endl;
     // cout<<s1;
-    
-    return 0;
+    //string str="Ronit";
+    //string occupaton="Software Engineer";
+    //cout<<"The string is : "<<str<<" "<<occupaton;
+    //cout<<str[0];
+    //cout<<str.length();
+// CONCATING NEW STRING:
+    //char st[]="Kumar Singh";
+    //cout<<str+' '+st;
+    //char st[]="kumar Singh";
+    //cout<<str+' '+st;
+    //str.append(" Singh");
+    //cout<<str;
+    //str.erase(8);
+    //cout<<str;
+    //cout<<str.length();
+    //cout<<str.find("ron");
+//     string str="Ronit";
+//     str.insert(5," Singh");
+//     cout<<str;
+int a,b;
+cout<<"Enter the value of a and b "<<endl;
+cin>>a;
+cin>>b;
+// int fact1=factorial(a);
+// int fact2=factorial(b);
+cout<<"The sum of factorial of two numbers : "<<sum(factorial(a),factorial(b));
+return 0;
 }
