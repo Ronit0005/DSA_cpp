@@ -1,18 +1,18 @@
-#include <iostream>
-using namespace std;
+//#include <iostream>
+//using namespace std;
 //enum size {small=10,medium=20,large=30,extralarge=40};
-int factorial(int n){
-    if(n==1){
-        return 1;
-    }else{
-        return n*factorial(n-1);
-    }
-}
-int sum(int a,int b){
-    return a+b;
-}
+// int factorial(int n){
+//     if(n==1){
+//         return 1;
+//     }else{
+//         return n*factorial(n-1);
+//     }
+// }
+// int sum(int a,int b){
+//     return a+b;
+// }
 //#include <string>
-int main(){
+//int main(){
     //int arr[]={1,2,3,4,5};
     //cout<<*arr<<endl;
     //cout<<*(arr+1);
@@ -82,12 +82,46 @@ int main(){
 //     string str="Ronit";
 //     str.insert(5," Singh");
 //     cout<<str;
-int a,b;
-cout<<"Enter the value of a and b "<<endl;
-cin>>a;
-cin>>b;
+// int a,b;
+// cout<<"Enter the value of a and b "<<endl;
+// cin>>a;
+// cin>>b;
 // int fact1=factorial(a);
 // int fact2=factorial(b);
-cout<<"The sum of factorial of two numbers : "<<sum(factorial(a),factorial(b));
-return 0;
+//cout<<"The sum of factorial of two numbers : "<<sum(factorial(a),factorial(b));
+//return 0;
+//}
+
+#include <iostream>
+using namespace std;
+// int cube(int n){
+//     return n*n*n;
+// }
+// int add(int x,int y);
+void Swap(int* p,int*q){
+    int temp;
+    temp=*p;
+    *p=*q;
+    *q=temp;
 }
+
+
+int main(){
+    /*int a,b;
+    cout<<"Enter the value of a and b respectively"<<endl;
+    cin>>a;
+    cin>>b;
+    cout<<cube(add(cube(a),cube(b)));
+    */
+    cout<<"Enter the two number a and b"<<endl;
+    int a,b;
+    cin>>a;
+    cin>>b;
+    cout<<"The value of a and b is : "<<a<<" "<<b<<endl;
+    Swap(&a,&b);
+    cout<<"The value of a and b is : "<<a<<" "<<b;
+    return 0;
+}
+// int add(int x,int y){
+//     return x+y;
+// }
