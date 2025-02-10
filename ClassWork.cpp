@@ -98,12 +98,15 @@ using namespace std;
 //     return n*n*n;
 // }
 // int add(int x,int y);
-void Swap(int* p,int*q){
-    int temp;
-    temp=*p;
-    *p=*q;
-    *q=temp;
-}
+// void Swap(int* p,int*q){
+//     int temp;
+//     temp=*p;
+//     *p=*q;
+//     *q=temp;
+// }
+// inline void modifier(int& x){
+//     x+=10;
+// }
 
 
 int main(){
@@ -113,14 +116,22 @@ int main(){
     cin>>b;
     cout<<cube(add(cube(a),cube(b)));
     */
-    cout<<"Enter the two number a and b"<<endl;
-    int a,b;
-    cin>>a;
-    cin>>b;
-    cout<<"The value of a and b is : "<<a<<" "<<b<<endl;
-    Swap(&a,&b);
-    cout<<"The value of a and b is : "<<a<<" "<<b;
-    return 0;
+    // cout<<"Enter the two number a and b"<<endl;
+    // int a,b;
+    // cin>>a;
+    // cin>>b;
+    // cout<<"The value of a and b is : "<<a<<" "<<b<<endl;
+    // Swap(&a,&b);
+    // cout<<"The value of a and b is : "<<a<<" "<<b;
+   /*
+   int a=3;
+   modifier(a);
+   */
+  for (int i=10;i<20;i++){
+    cout<<"Hello"<<endl;
+  }
+  
+   return 0;
 }
 // int add(int x,int y){
 //     return x+y;
