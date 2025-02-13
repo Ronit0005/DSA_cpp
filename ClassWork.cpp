@@ -92,8 +92,8 @@
 //return 0;
 //}
 
-#include <iostream>
-using namespace std;
+//#include <iostream>
+//using namespace std;
 // int cube(int n){
 //     return n*n*n;
 // }
@@ -109,7 +109,7 @@ using namespace std;
 // }
 
 
-int main(){
+//int main(){
     /*int a,b;
     cout<<"Enter the value of a and b respectively"<<endl;
     cin>>a;
@@ -127,12 +127,57 @@ int main(){
    int a=3;
    modifier(a);
    */
-  for (int i=10;i<20;i++){
-    cout<<"Hello"<<endl;
-  }
+//   for (int i=10;i<20;i++){
+//     cout<<"Hello"<<endl;
+//   }
   
-   return 0;
-}
+ //  return 0;
+//}
 // int add(int x,int y){
 //     return x+y;
 // }
+// int add(int x,int y,int z=10){
+//     return x+y+z;
+// }
+/*
+int main(){
+    // cout<<add(20,30);
+    // int twoD[2][3];
+    // for(int i=0;i<2;i++){
+        //     for(int j=0;j<3;j++){
+            //         cin>>twoD[i][j];
+            //     }
+            // }
+            // for(int i=0;i<2;i++){
+                //     for(int j=0;j<3;j++){
+                    //         cout<<twoD[i][j];
+                    //     }
+                    //     }
+                    return 0;
+                }
+*/
+#include <iostream>
+using namespace std;
+int main(){
+    // int t=0;
+    // while(t<10){
+    //     cout<<"Hello World ! "<<t<<endl;
+    //     t++;
+    // }
+    // int t=0;
+    // do{
+    //     cout<<"Hello World ! "<<t<<endl;
+    //     t++;
+    // }while(t<10);
+    string day[7]={"sunday","Monaday","tuesday","wednesday","thursday","friday","saturday"};
+    int n;
+    cout<<"Enter the day number : ";
+    cin>>n;
+    if(n>6){
+        cout<<"Invalid day number : ";
+    }
+    else{
+        cout<<day[n-1];
+    }
+    return 0;
+}
