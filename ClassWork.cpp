@@ -156,7 +156,7 @@ int main(){
                     return 0;
                 }
 */
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 int main(){
     // int t=0;
@@ -179,5 +179,143 @@ int main(){
     else{
         cout<<day[n-1];
     }
+    return 0;
+}*/
+
+
+
+/*#include <iostream>
+using namespace std;
+int factorial(int n){
+    if(n==1){
+        return 1;
+    }
+    else{
+        return n*factorial(n-1);
+    }
+}
+int main(){
+    cout<<"Enter the numbers in array one by one !!";
+    int arr[10];
+    for(int i=0;i<10;i++){
+        cin>>arr[i];
+    }
+    for(int i=0;i<10;i++){
+        cout<<"The factoial of "<<i+1<<" "<<factorial(arr[i])<<endl;
+    }
+    return 0;
+}*/
+
+
+/*#include <iostream>
+using namespace std;
+struct Student{
+    string name;
+    int roll_no;
+    int age;
+    float cgpa;
+};
+
+int main(){
+    Student s[5];
+    for(int i=0;i<5;i++){
+        cout<<"The student no. "<<i+1;
+        cout<<"Enter your name"<<endl;
+        getline(cin,s[i].name,'.');
+        cout<<"Enter your age :"<<endl;
+        cin>>s[i].age;
+        cout<<"Enter your roll no. "<<endl;
+        cin>>s[i].roll_no;
+        cout<<"Enter your cgpa : "<<endl;
+        cin>>s[i].cgpa;
+    }
+    for(int i=0;i<5;i++){
+        cout<<"Name : "<<s[i].name<<" "<<"Age : "<<s[i].age<<" "<<"Roll No : "<<s[i].roll_no<<" "<<"Cgpa : "<<s[i].cgpa<<endl;
+    }
+    return 0;
+}*/
+// PRINTING DAY BY RESPECTIVELY NUMBER
+
+/*#include <iostream>
+using namespace std;
+int main(){
+    cout<<"Enter your choice"<<endl ;
+    int n;
+    cin>>n;
+    if(n==0){
+        cout<<"Monday";
+    }
+    else if(n==1){
+        cout<<"Tuesday";
+    }
+    else if(n==2){
+        cout<<"Wednesday";
+    }
+    else if(n==3){
+        cout<<"Thurday";
+    }
+    else if(n==4){
+        cout<<"Friday";
+    }
+    else if(n==5){
+        cout<<"Saturday";
+    }
+    else if(n==6){
+        cout<<"Sunday";
+    }
+    else {
+        cout<<"Invalid Input !!!";
+    }
+    return 0;
+}
+*/
+
+// USING SWITCH CASE :
+
+/*#include <iostream>
+using namespace std;
+int main(){
+    cout<<"Enter the day number :";
+    int n;
+    cin>>n;
+    switch(n){
+        case 0:{
+            cout<<"Monday";
+            break;
+        }
+        case 1:{
+            cout<<"Tuesday";
+            break;
+        }
+        case 3:{
+            cout<<"Wednesday";
+            break;
+        }
+        default:{
+            cout<<"Invalid Input !!!";
+        }
+    }
+    return 0;
+}
+*/
+
+// CLASS AND OBJECT (OOPS):
+#include <iostream>
+using namespace std;
+class Student{
+    int age;float cgpa;
+    public:
+    Student(int x,float y){
+       age=x;
+       cgpa=y;
+    }
+    void display(){
+        cout<<"Cgpa is : "<<cgpa<<endl;
+        cout<<"Age is : "<<age;
+    }
+};
+int main(){
+    Student ronit(20,9.2);
+    ronit.display();
     return 0;
 }
