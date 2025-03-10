@@ -300,7 +300,7 @@ int main(){
 */
 
 // CLASS AND OBJECT (OOPS):
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 class Student{
     int age;float cgpa;
@@ -317,5 +317,99 @@ class Student{
 int main(){
     Student ronit(20,9.2);
     ronit.display();
+    return 0;
+}*/
+/*#include <iostream>
+using namespace std;
+class Student{
+    public:
+    int age;
+    float cgpa;
+    Student(int x,int y){
+        age=x;
+        cgpa=y;
+    }
+    void display(){
+        cout<<"The cgpa is : "<<cgpa<<endl;
+        cout<<"The age is :  "<<age<<endl;
+    }
+};
+int main(){
+    Student ob(20,9.1);
+    //cout<<ob.age<<endl;
+    //cout<<ob.cgpa<<endl;
+    ob.display();
+    return 0;
+}*/
+
+
+/*#include <iostream>
+using namespace std;
+class Courses{
+    public:
+    int noOfSemester;
+    int noOfYear;
+    Courses(int a,int b){
+        noOfSemester=a;
+        noOfYear=b;
+    }
+    Courses(Courses &x){
+        noOfSemester=x.noOfSemester;
+        noOfYear=x.noOfYear;
+    }
+};
+int main(){
+    Courses obj(8,4);
+    Courses obj2=obj;
+    cout<<obj2.noOfSemester<<endl;
+    cout<<obj2.noOfYear<<endl;
+    return 0;
+}*/
+/*class rectangle{
+    public :
+    int height;
+    int breadth;
+    rectangle(){
+       height=0;
+       breadth=0;
+    }
+    rectangle(int x, int y){
+        height=x;
+        breadth=y;
+    }
+};
+#include <iostream>
+using namespace std;
+int main(){
+    rectangle obj;
+    cout<<obj.breadth<<endl;
+    rectangle ob(12,24);
+    cout<<ob.breadth;
+    return 0;
+}*/
+#include <iostream>
+using namespace std;
+class student{
+    private:
+    int age;
+    int CGPA;
+    public:
+    int regno;
+    student(int x,int y,int z){
+      age=x;
+      CGPA=y;
+      regno=z;
+    }
+    friend void display(student &x);
+
+};
+void display(student &x){
+    cout<<x.age<<endl;
+    cout<<x.CGPA<<endl;
+    cout<<x.regno;
+}
+int main(){
+    student ronit(18,9.2,2401);
+     
     return 0;
 }
