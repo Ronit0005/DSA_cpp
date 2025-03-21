@@ -387,6 +387,7 @@ int main(){
     cout<<ob.breadth;
     return 0;
 }*/
+/*
 #include <iostream>
 using namespace std;
 class student{
@@ -396,12 +397,12 @@ class student{
     public:
     int regno;
     student(int x,int y,int z){
-      age=x;
-      CGPA=y;
-      regno=z;
+        age=x;
+        CGPA=y;
+        regno=z;
     }
     friend void display(student &x);
-
+    
 };
 void display(student &x){
     cout<<x.age<<endl;
@@ -411,5 +412,26 @@ void display(student &x){
 int main(){
     student ronit(18,9.2,2401);
      
+    return 0;
+}
+*/
+#include <iostream>
+using namespace std;
+class student{
+    public:
+    int maths,science;
+    student(int x,int y){
+        this->maths=x;
+        this->science=y;
+    }
+    student operator +(student &x){
+        return student(maths+x.maths,science+x.science);
+    }
+    
+};
+int main(){
+    student s1(10,20);
+    student s2(30,40);
+    student s3=s1+s2;
     return 0;
 }
