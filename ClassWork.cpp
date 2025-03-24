@@ -415,6 +415,7 @@ int main(){
     return 0;
 }
 */
+/*
 #include <iostream>
 using namespace std;
 class student{
@@ -433,5 +434,50 @@ int main(){
     student s1(10,20);
     student s2(30,40);
     student s3=s1+s2;
+    return 0;
+}
+
+*/
+/*
+#include <iostream>
+using namespace std;
+class student{
+    int age;
+    public:
+    student(int x){
+        age=x;
+    }
+    friend void show(student &ref);
+};
+void show(student &ref){
+    cout<<"Age : "<<ref.age;
+}
+int main(){
+    student obj(10);
+    show(obj);
+    return 0;
+}
+*/
+
+#include <iostream>
+using namespace std;
+class Base{
+    public:
+    int a,b;
+    void show(){
+        cout<<"A : "<<a;
+        cout<<"B : "<<b;
+    }
+};
+class Derived:public Base{
+    public:
+    int c,d;
+    void show(){
+        cout<<"Overriding the show method";
+    }
+};
+int main(){
+    Derived obj;
+    obj.show();
     return 0;
 }
