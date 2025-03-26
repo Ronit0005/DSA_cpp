@@ -458,7 +458,7 @@ int main(){
     return 0;
 }
 */
-
+/*
 #include <iostream>
 using namespace std;
 class Base{
@@ -479,5 +479,26 @@ class Derived:public Base{
 int main(){
     Derived obj;
     obj.show();
+    return 0;
+}
+*/
+
+#include <iostream>
+using namespace std;
+class A{
+    public:
+    virtual void show(){
+        cout<<"Show of class A";
+    }
+};
+class B:public A{
+    public:
+    virtual void show(){
+      cout<<"Show of class B";
+    }
+};
+int main(){
+    A* ptr=new B();
+    ptr->show();
     return 0;
 }
