@@ -482,7 +482,7 @@ int main(){
     return 0;
 }
 */
-
+/*
 #include <iostream>
 using namespace std;
 class A{
@@ -494,7 +494,7 @@ class A{
 class B:public A{
     public:
     virtual void show(){
-      cout<<"Show of class B";
+        cout<<"Show of class B";
     }
 };
 int main(){
@@ -502,3 +502,4 @@ int main(){
     ptr->show();
     return 0;
 }
+*/
