@@ -503,3 +503,51 @@ int main(){
     return 0;
 }
 */
+/*
+#include <iostream> 
+using namespace std;
+int main(){
+    int a, b ;
+    cout <<"Enter the value of a ";
+    cin>>a;
+    cout <<"Enter the value of b ";
+    cin>>b;
+    try{
+        if (b==0){
+            throw "Division by zero error";
+        }
+        else{
+            cout<<"The division of a and b is : ";
+        }
+        cout <<a/b;
+    }
+    catch(const char* msg){
+        cerr <<"Error : "<<msg;
+    }
+    return 0;
+}
+*/
+
+#include <iostream>
+#include <vector>
+using namespace std ;
+int main(){
+    vector <int> myvec={1,2,3,4,5,6,7,8,9,10};
+    for (int i:myvec){
+        cout<<i<<endl;
+    }
+    cout<<myvec.size()<<endl;
+    cout<<myvec.empty()<<endl;
+    for(int j=0;j<1100;j++){
+        myvec.push_back(j);
+    }
+    for(int i:myvec){
+        cout<<i<<endl;
+    }
+    for(int i:myvec){
+        myvec.pop_back();
+    }
+    cout<<myvec.empty();
+    return 0;
+}
+
