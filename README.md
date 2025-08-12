@@ -1,3 +1,2 @@
 # Cpp_repo
-I am learning the c++ programming language.
-This will help me in competitive coding in future.
+This are the files cretaed while learning DSA in C++ 
