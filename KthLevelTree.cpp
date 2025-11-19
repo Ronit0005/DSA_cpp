@@ -33,6 +33,7 @@ void kthLevel(Node* root,int k){
     }
     if(k == 1){
         cout<<root->Data<<" ";
+        return;
     }
     kthLevel(root->left,k-1);
     kthLevel(root->right,k-1);

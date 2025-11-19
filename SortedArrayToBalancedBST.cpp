@@ -38,7 +38,7 @@ Node* helper(vector<int> arr,int left,int right){
     if(left > right){
         return NULL;
     }
-    int mid = left+right/2;
+    int mid = (left+right)/2;
     Node* root = new Node(arr[mid]);
     root->left = helper(arr,0,mid-1);
     root->right = helper(arr,mid+1,right);
