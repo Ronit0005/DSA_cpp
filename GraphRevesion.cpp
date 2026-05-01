@@ -87,6 +87,38 @@ class Graph{
         }
         return false;
     }
+    // Cycle Detection Using BFS :-
+    bool isCycleUndirBFS(int src,vector<bool>& vis){
+        queue<pair<int,int>> que;
+        que.push({src,-1});
+        vis[src]=true;
+
+        while(que.size()>0){
+            int u = que.front().first;
+            int par = que.front().second;
+            for(int v:l[u]){
+                if(!vis[v]){
+                    que.push({v,u});
+                    vis[v] = true;
+                } else {
+                    if(par != v){
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+    bool isCycle(){
+        int src = 0;
+        vector<bool> vis(V,false);
+        for(int src;src<V;src++){
+            if(!vis[src]){
+                if(isCycleUndirBFS(src,vis)) return true;
+            }
+        }
+        return false;
+    }
 };
 
 
@@ -99,6 +131,7 @@ int main(){
 
     // g.printAll();
     // g.BFS();
-    g.DFS();
+    // g.DFS();
+    
     return 0;
 }

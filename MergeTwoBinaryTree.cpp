@@ -85,12 +85,22 @@ void print_all(Node* root){
     cout<<root->Data<<" ";
     print_all(root->right);
 }
+
+Node* builtBSTFromSorted(vector<int> arr,int left,int right){
+    if(left > right) return NULL;
+    int mid = (left+right)/2;
+    Node* root = new Node(arr[mid]);
+    root->left = builtBSTFromSorted(arr,left,mid-1);
+    root->right = builtBSTFromSorted(arr,mid+1,right);
+
+    return root;
+}
 int main(){
     vector<int> arr1 = {1,2,8,10};
     vector<int> arr2 = {0,3,5};
     Node* root1 = builtBST({1,2,8,10});
     Node* root2 = builtBST({0,3,5});
-    Node* final = builtBST(adder(arr1,arr2));
-    print_all(final);
+    vector<int> final = adder(arr1,arr2);
+    Node* final = builtBSTFromSorted(final,0,final.size()-1);
     return 0;
 }

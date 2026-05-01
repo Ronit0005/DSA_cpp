@@ -1,19 +1,22 @@
 #include <iostream>
 using namespace std;
-#include <vector>
 
-int main(){
-    vector<vector<int>> mat={{1,3,5,7},{10,11,16,20},{23,30,34,60}};
-    int n=3;
-    int target=16;
-    int str=0;
-    int mid;
-    int end=mat.size()-1;
-    while(str<=end){
-        mid=str+(end-str)/2;
-        if(mat[mid][n-1]<target<mat[mid][0]){
-            cout<<"Target lies in the row : "<<mid<<endl;
-        }
+int binarySearch(int arr[],int low,int high,int tar){
+    if(low > high) return false;
+    int mid = (low+high)/2;
+    if(tar == arr[mid]) return true;
+    else if(arr[mid] > tar){
+        high = mid-1;
+        return binarySearch(arr,low,high,tar);
     }
-    return 0;
+    else if(arr[mid] < tar){
+        low = mid+1;
+        return binarySearch(arr,low,high,tar);
+    }
+    return -1;
+}
+int main(){
+    int arr[]= {1,2,3,4,5,6,7,8,9};
+    int tar = 10;
+    cout<<binarySearch(arr,0,8,tar);
 }
