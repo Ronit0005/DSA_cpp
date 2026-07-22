@@ -12,6 +12,7 @@ class Node{
     Node(int data,Node* prev){
         this->data = data;
         back = prev;
+        next = NULL;
     }
 };
 

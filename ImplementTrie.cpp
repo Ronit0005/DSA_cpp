@@ -37,7 +37,6 @@ class Trie{
             node->increasePre();
         }
         node->increaseEnd();
-        node->increasePre();
     }
     int countWordEqualTo(string word){
         Node* node = root;
